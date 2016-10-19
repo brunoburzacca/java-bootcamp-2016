@@ -1,0 +1,19 @@
+diff a/ej02Bis/ConectionFactory.java b/ej02Bis/ConectionFactory.java	(rejected hunks)
+@@ -0,0 +1,16 @@
++package org.globant.ej02Bis;
++
++public class ConectionFactory extends OptionFactory {
++
++	@Override
++	public Option getOption(String type) {
++		if ("server 1".equals(type)) {
++			return new Server1();
++		} else {
++			return new Server2();
++		}
++	}
++
++	
++
++}
+\ No newline at end of file
