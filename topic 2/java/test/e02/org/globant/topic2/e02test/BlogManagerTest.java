@@ -31,14 +31,7 @@ public class BlogManagerTest {
 		}
 
 	}
-	//show the object's array 
-	@Test
-	public void showObjectsArray() {
-		for (int i = 0; i <= 9; i++) {
-			System.out.println(
-					"the title is :" + post[i].title + " the date is : " + post[i].date + " text: " + post[i].text);
-		}	
-	}
+	
 	
 	@Test
 	public void addNewPostTest(){
@@ -75,10 +68,10 @@ public class BlogManagerTest {
 			if (post[count].state==true){
 				System.out.println(
 						"the title is :" + post[count].title + " the date is : " + post[count].date + " text: " + post[count].text);
-				count++;
-			}else{
-				count++;
+				
 			}
+				count++;
+			
 			}
 		}
 		
