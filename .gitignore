@@ -39,3 +39,78 @@ topic 4/topic4/.settings/org.eclipse.jdt.core.prefs
 topic 4/topic4/.settings/org.eclipse.m2e.core.prefs
 topic 4/.recommenders/caches/identified-project-coordinates.json
 topic 4/.recommenders/caches/manual-mappings.json
+.metadata/.plugins/org.eclipse.core.resources/.root/4.tree
+topic 3/.recommenders/caches/identified-project-coordinates.json
+topic 3/.recommenders/caches/manual-mappings.json
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.fdt
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.fdx
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.fnm
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.frq
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.nrm
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.prx
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.tii
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_2.tis
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.fdt
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.fdx
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.fnm
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.frq
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.nrm
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.prx
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.tii
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/_4.tis
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments.gen
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments_3
+topic 3/.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments_5
+topic 3/topic06/.classpath
+topic 3/topic06/.gitignore
+topic 3/topic06/.project
+topic 3/topic06/.settings/org.eclipse.core.resources.prefs
+topic 3/topic06/.settings/org.eclipse.jdt.core.prefs
+topic 3/topic06/.settings/org.eclipse.m2e.core.prefs
+topic 3/topic06/pom.xml
+topic 3/topic06/src/main/java/org/globant/topic06/ex01/CartObject.java
+topic 3/topic06/src/main/java/org/globant/topic06/ex01/ShoppingCartService.java
+topic 3/topic3/.classpath
+topic 3/topic3/.gitignore
+topic 3/topic3/.project
+topic 3/topic3/.settings/org.eclipse.core.resources.prefs
+topic 3/topic3/.settings/org.eclipse.jdt.core.prefs
+topic 3/topic3/.settings/org.eclipse.m2e.core.prefs
+topic 3/topic3/pom.xml
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/CartObject.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/Demo.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartFactory.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartImp.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartJmsClient.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartProxy.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartService.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartWebService.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex01/ShoppingCartWebServiceClient.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudFactory.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudJmsClient.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudService.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudServiceImp.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudServiceProxy.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudWebService.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/CrudWebServiceClient.java
+topic 3/topic3/src/main/java/org/globant/topic3/ex02/UserObject.java
+topic 3/topic3/src/test/java/org/globant/topic3/ex01/ShoppingCartTest.java
+topic 3/topic3/src/test/java/org/globant/topic3/ex02/CrudTest.java
+topic 3/topic3/target/classes/META-INF/MANIFEST.MF
+topic 3/topic3/target/classes/META-INF/maven/Services/services/pom.properties
+topic 3/topic3/target/classes/META-INF/maven/Services/services/pom.xml
+topic 4/topic4/target/classes/META-INF/MANIFEST.MF
+topic 4/topic4/target/classes/META-INF/maven/Topic4/topic4/pom.properties
+topic 4/topic4/target/classes/META-INF/maven/Topic4/topic4/pom.xml
+topic6/.classpath
+topic6/.project
+topic6/.settings/org.eclipse.core.resources.prefs
+topic6/.settings/org.eclipse.jdt.core.prefs
+topic6/.settings/org.eclipse.m2e.core.prefs
+topic6/pom.xml
+topic6/pomTutorial.xml
+topic6/src/main/java/org/gaston/webApp/App.java
+topic6/src/main/java/org/gaston/webApp/Greeting.java
+topic6/src/main/java/org/gaston/webApp/GreetingController.java
+topic6/src/test/resources/.gitkeep
+topic6/target/test-classes/.gitkeep
