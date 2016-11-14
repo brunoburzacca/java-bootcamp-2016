@@ -18,15 +18,12 @@ public class UserController {
 		return userList;
 	}
 
-	@RequestMapping("/showUser2")
-	public String showUser2() {
-		return "this is show user";
-	}
+	
 
 	@RequestMapping("/addUser")
-	public String addUser(@RequestParam(value = "name", defaultValue = "null") String name,
-			@RequestParam(value = "nickName", defaultValue = "null") String nickName,
-			@RequestParam(value = "password", defaultValue = "null") String password,
+	public String addUser(@RequestParam(value = "name", defaultValue = "") String name,
+			@RequestParam(value = "nickName", defaultValue = "") String nickName,
+			@RequestParam(value = "password", defaultValue = "") String password,
 			@RequestParam(value = "state") boolean state) {
 		for (User user : userList) {
 			if (user.getName().equals(name)) {
@@ -38,7 +35,7 @@ public class UserController {
 	}
 
 	@RequestMapping("/deleteUser")
-	public String deleteUser(@RequestParam(value = "name", defaultValue = "null") String name) {
+	public String deleteUser(@RequestParam(value = "name", defaultValue = "") String name) {
 		for (User user : userList) {
 			if (user.getName().equals(name)) {
 				user.setState(false);
@@ -49,9 +46,9 @@ public class UserController {
 	}
 
 	@RequestMapping("/updateUser")
-	public String updateUser(@RequestParam(value = "name", defaultValue = "null") String name,
-			@RequestParam(value = "nickName", defaultValue = "null") String nickName,
-			@RequestParam(value = "password", defaultValue = "null") String password,
+	public String updateUser(@RequestParam(value = "name", defaultValue = "") String name,
+			@RequestParam(value = "nickName", defaultValue = "") String nickName,
+			@RequestParam(value = "password", defaultValue = "") String password,
 			@RequestParam(value = "state") boolean state) {
 		String newPassword = null;
 		for (User user : userList) {
@@ -65,7 +62,7 @@ public class UserController {
 	}
 
 	@RequestMapping("/findByName")
-	public User findByName(@RequestParam(value = "name", defaultValue = "null") String name) {
+	public User findByName(@RequestParam(value = "name", defaultValue = "") String name) {
 
 		for (User user : userList) {
 			if (user.getName().equals(name)) {
@@ -77,7 +74,7 @@ public class UserController {
 	}
 
 	@RequestMapping("/findByNickName")
-	public User findByNickName(@RequestParam(value = "nickName", defaultValue = "null") String nickName) {
+	public User findByNickName(@RequestParam(value = "nickName", defaultValue = "") String nickName) {
 
 		for (User user : userList) {
 			if (user.getNickName().equals(nickName)) {
