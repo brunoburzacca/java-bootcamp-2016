@@ -28,7 +28,9 @@ CREATE TABLE `highSchool`.`course` (
 CREATE TABLE `highSchool`.`courseline` (
   `idCourseLine` INT NOT NULL,
   `idCourse` INT NULL,
-  `idStudent` INT NULL,
+  `idStudent` INT NULL,`first` INT NULL,
+  `second` INT NULL,
+  `third` INT NULL,`finalNote` INT NULL
   PRIMARY KEY (`idCourseLine`));
 
 
@@ -40,13 +42,7 @@ CREATE TABLE `highSchool`.`schudele` (
 `idcourse` INT NULL ,  PRIMARY KEY (`idschudele`));
 
 
-CREATE TABLE `highSchool`.`notes` (
-  
-  `idCourseline` INT NULL,
-  `first` INT NULL,
-  `second` INT NULL,
-  `third` INT NULL,
-  PRIMARY KEY (`idStudent`));
+
 
 ______________________________________________________________________________________________________________________________________
 exersice 2
