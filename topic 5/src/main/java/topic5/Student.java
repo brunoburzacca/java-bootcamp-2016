@@ -11,7 +11,7 @@ public class Student extends BaseEntity {
 	
  
     private String name,lastName,birth,course;
-    private int first=0,second=0,third=0,total=0;
+    private int first=0,second=0,third=0,finalNote=0;
  
 
  
@@ -75,11 +75,11 @@ public class Student extends BaseEntity {
 	}
 
 	public int getTotal() {
-		return total;
+		return finalNote;
 	}
 
 	public void setTotal(int total) {
-		this.total = total;
+		this.finalNote = total;
 	}
 
 	

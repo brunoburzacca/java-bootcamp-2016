@@ -519,3 +519,5 @@ topic6/src/main/java/org/gaston/webApp/Greeting.java
 topic6/src/main/java/org/gaston/webApp/GreetingController.java
 topic6/src/test/resources/.gitkeep
 topic6/target/test-classes/.gitkeep
+.metadata/
+RemoteSystemsTempFiles/.project

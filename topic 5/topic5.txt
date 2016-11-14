@@ -10,7 +10,7 @@ db.student.insertMany([{name: "student5",lastName: "last5",birth: "01/01/1990",c
 db.student.insertMany([{name: "student6",lastName: "last6",birth: "01/01/1990",course:"math",notes:[10,10,10,10] }])
 db.student.insertMany([{name: "student6",lastName: "last6",birth: "01/01/1990",course:"english",notes:[1,1,1,1] }])
 
-db.student.find( { course:"math","notes.3": {$gt: 1}} )
+db.student.find( { course:"math","notes.3": {$gt: 4}} )
 _______________________________________________________________________________________________________________________
 
 db.teacher.insertMany([{name: "teacher1",lastName: "last1",birth: "01/01/1970", course:"english"}])
@@ -19,4 +19,4 @@ db.teacher.insertMany([{name: "teacher1",lastName: "last1",birth: "01/01/1970",c
 db.teacher.insertMany([{name: "teacher2",lastName: "last2",birth: "01/01/1970",course:"science"}])
 db.teacher.insertMany([{name: "teacher3",lastName: "last3",birth: "01/01/1970",course:"physic"}])
 
-db.teacher.find({ name:"teacher1"}).sort({course:1})
+db.teacher.find({ name:"teacher1"}).sort({course})
