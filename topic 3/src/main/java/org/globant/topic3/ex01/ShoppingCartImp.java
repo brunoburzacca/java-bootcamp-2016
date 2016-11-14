@@ -12,7 +12,7 @@ public class ShoppingCartImp implements ShoppingCartService {
 		CartObject  cartAux[]= ShoppingCartTest.getCart();
 		
 		boolean flag = false;
-		String choise=null;
+		String choice=null;
 		int cuantity=0, itemId=0, counter=0;
 		
 
@@ -35,9 +35,9 @@ public class ShoppingCartImp implements ShoppingCartService {
 			counter++;
 			
 			System.out.println("do you wish to add another product?: y/n");
-			Scanner userChoise = new Scanner(System.in);
-			choise = userChoise.next();
-			if (choise.equals("n")){
+			Scanner userChoice = new Scanner(System.in);
+			choice = userChoice.next();
+			if (choice.equals("n")){
 				flag=true;
 			}
 					

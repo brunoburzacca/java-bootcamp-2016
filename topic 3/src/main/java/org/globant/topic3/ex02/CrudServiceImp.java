@@ -45,12 +45,12 @@ public class CrudServiceImp implements CrudService {
 		UserObject[] user = CrudTest.getUser();
 		String userRead=null;
 		
-		System.out.println("insert the name of the user you wnat to see: ");
+		System.out.println("insert the name of the user you want to see: ");
 		Scanner scanUser = new Scanner(System.in);
 		userRead = scanUser.next();
 		
 		for(int i=0 ; i<=4; i++){
-			if(user[i].id.equals(userRead)){
+			if(user[i].name.equals(userRead)){
 				System.out.println("the user is: "+ user[i].id+ " The pass is: "+ user[i].pass+" the name is : "+ user[i].name);
 			}
 		}

@@ -26,21 +26,16 @@ public class CrudTest {
 		int select=0;
 		
 		
-		System.out.print("select 1 : create ");
-		System.out.print("select 2 : read ");
-		System.out.print("select 3 : update ");
-		System.out.print("select 4 : delete ");
+		System.out.println("select 1 : create ");
+		System.out.println("select 2 : read ");
+		System.out.println("select 3 : update ");
+		System.out.println("select 4 : delete ");
 		Scanner scan = new Scanner(System.in);
 		select = scan.nextInt();
 		
 		CrudService shoppingCart1 = CrudFactory.getLocalService();
 		
-//		CrudWebServiceClient cwsc = new CrudWebServiceClient();
-//		cwsc.create();
-//		cwsc.read();
-//		cwsc.update();
-//		cwsc.delete();
-//		
+	
 		switch (select){
 		
 		case 1:
@@ -66,13 +61,7 @@ public class CrudTest {
 		}
 		
 		  
-		/*//Calling crud with a remote instance of the CrudService using Web services.  
-		CrudService shoppingCart2 = CrudFactory.getRemoteServiceUsingWebService();  
-		shoppingCart2.create();
 
-		//Calling crud with a remote instance of the CrudService using Web services.  
-		CrudService shoppingCart3 = CrudFactory.getRemoteServiceUsingJms();  
-		shoppingCart3.crud();*/
 	}
 
 	public static UserObject[] getUser() {
