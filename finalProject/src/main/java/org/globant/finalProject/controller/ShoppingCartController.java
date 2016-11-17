@@ -1,71 +1,96 @@
 package org.globant.finalProject.controller;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.catalina.filters.AddDefaultCharsetFilter;
-import org.globant.finalProject.main.AddUser;
-import org.globant.finalProject.main.BillLine;
-import org.globant.finalProject.main.FindByCategory;
-import org.globant.finalProject.main.FindByName;
-import org.globant.finalProject.main.Product;
-import org.globant.finalProject.main.SaveCart;
-import org.globant.finalProject.main.UserLoggin;
+import org.globant.finalProject.model.BillLine;
+import org.globant.finalProject.model.Cart;
+import org.globant.finalProject.model.Product;
+import org.globant.finalProject.model.User;
+import org.globant.finalProject.services.ICart;
+import org.globant.finalProject.services.IProduct;
+import org.globant.finalProject.services.IUser;
+import org.globant.finalProject.services.UserImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ShoppingCartController implements IShoppingCart {
-
-	@Override
-	@RequestMapping("/RegisterUser")
+public class ShoppingCartController  {
+	public int userId=0;
+	public  User user = new User(null, null, userId);
+	
+	@Autowired
+    private IUser serviceUser;
+	@Autowired
+    private IProduct serviceProduct;
+	@Autowired
+    private ICart serviceCart;
+    	
+	
+	@RequestMapping("/registerUser")
 	public String registerUser(@RequestParam(value = "name", defaultValue = "null") String name,
 			@RequestParam(value = "password", defaultValue = "null") String password,
 			@RequestParam(value = "mail", defaultValue = "null") String mail,
 			@RequestParam(value = "phone") int phone) {
 
-		AddUser user = new AddUser();
-		user.addUser(name, password, mail, phone);
-
-		return "user registered successful";
+		return serviceUser.addUser(name, password, mail, phone);
 	}
 
-	@Override
-	@RequestMapping("/UserLoggin")
+	
+	@RequestMapping("/userLoggin")
 	public String loggin(@RequestParam(value = "name", defaultValue = "null") String name,
-			@RequestParam(value = "password", defaultValue = "null") String password) {
-
-		UserLoggin loggin = new UserLoggin();
-
-		return loggin.userLoggin(name, password);
+			@RequestParam(value = "password", defaultValue = "null") String password) {	
+		user = new User(name, password, userId);
+		return serviceUser.logginUser(user);
+		
 	}
 
-	@Override
+	
 	@RequestMapping("/findByCategory")
 	public ArrayList<Product>  findByCategory(@RequestParam(value = "category", defaultValue = "null") String category) {
 		
-		FindByCategory findedList = new FindByCategory();
-		return findedList.findByCategory(category) ;
+	
+		return serviceProduct.findByCategory(category) ;
 		
 	}
 
-	@Override
+	
 	@RequestMapping("/findByName")
 	public ArrayList<Product> findByName(@RequestParam(value = "name", defaultValue = "null") String name) {
-		FindByName findedList = new FindByName();
-		return findedList.findByName(name);
+		return serviceProduct.findByName(name);
 	}
-	//this is not finish yet
-	@Override
-	@RequestMapping(method = RequestMethod.POST, value = "/saveCart")
-	public String saveCart(@RequestBody List<BillLine> billLine) {
+	
+	
+	@RequestMapping(method = RequestMethod.POST, value ="/saveCart" )
+	public @ResponseBody String saveCart(@RequestBody ArrayList<BillLine> billLine ) {		
+		return serviceCart.saveCart(billLine, user);
+	}
+	
+	
+	@RequestMapping("/savePurchase" )
+	public String savePurchase(@RequestParam(value = "confirmParam", defaultValue = "" )int confirmParam,
+							@RequestParam(value = "billId", defaultValue = "" )int billId)  {
+		return serviceCart.savePurchase(confirmParam, billId);
+	}
+
+	@RequestMapping("/showCart" )
+	public ArrayList<Cart> showCart(@RequestParam(value = "billId", defaultValue = "" )int billId)  {
 		
-		SaveCart cart = new SaveCart();
-		cart.saveCart(billLine);
-		return null;
+		return serviceCart.showCart(billId);
 	}
+	
+	@RequestMapping("/logOff" )
+	public String showCart()  {
+		serviceUser.logOff(user);
+		return "user logged off";
+	}
+
+
+	
 
 }
