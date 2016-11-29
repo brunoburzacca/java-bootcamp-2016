@@ -14,9 +14,10 @@ public class UserDB {
 		boolean existingUser=false;
 		
 		try {
-			System.out.println("trying to connect to the server ");
-
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("successful connection");
 			
 			
@@ -43,9 +44,10 @@ public void addUser(String name, String password, String mail, int phone) {
 		try{
 			
 			
-			System.out.println("trying to connect to the server ");
-		
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("successful connection");
 			
 			
@@ -66,15 +68,14 @@ public void addUser(String name, String password, String mail, int phone) {
 	}
 public boolean userLoggin(User user) {
 	int userId;
-	String result = null;
-	String userName;
-	String userPassword;
+	
 	boolean userLogged=false;
 	try {
 
-		System.out.println("trying to connect to the server ");
-
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+		String URL = "jdbc:mysql://localhost/shoppingcart";
+		String USER = "root";
+		String PASS = "Globant2016";
+		Connection conn = DriverManager.getConnection(URL, USER, PASS);
 		System.out.println("successful connection");
 
 		Statement stmt = conn.createStatement();

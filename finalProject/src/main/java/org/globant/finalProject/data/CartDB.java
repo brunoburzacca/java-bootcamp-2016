@@ -25,9 +25,10 @@ public class CartDB {
 
 		try {
 
-			System.out.println("trying to connect to the server ");
-
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("successful connection");
 
 			for (BillLine billLines : billLine) {
@@ -81,10 +82,10 @@ public class CartDB {
 
 		try {
 			if (confirmParam == 1) {
-				System.out.println("trying to connect to the server ");
-
-				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root",
-						"Globant2016");
+				String URL = "jdbc:mysql://localhost/shoppingcart";
+				String USER = "root";
+				String PASS = "Globant2016";
+				Connection conn = DriverManager.getConnection(URL, USER, PASS);
 				System.out.println("successful connection");
 
 				PreparedStatement st = conn.prepareStatement("UPDATE bill SET state = ? where billId=?");
@@ -103,7 +104,10 @@ public class CartDB {
 		boolean existingCart = false;
 		int state = 0;
 		try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT  state FROM bill WHERE billId ='" + billId + "'");
@@ -125,7 +129,10 @@ public class CartDB {
 		ArrayList<Cart> arrayCart = new ArrayList<Cart>();
 		float subtotal = 0;
 		try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			Statement stmt = conn.createStatement();
 			
 			

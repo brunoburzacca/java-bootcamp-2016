@@ -6,11 +6,11 @@ public class Product {
 	String producName=null, productCategory=null;
 	Double price;
 	
-	public Product(int productId1,String producName1,String productCategory1, Double price1){
-		this.productId=productId1;
-		this.producName=producName1;
-		this.productCategory=productCategory1;
-		this.price=price1;
+	public Product(int productIdParam,String producNameParam,String productCategoryParam, Double priceParam){
+		this.productId=productIdParam;
+		this.producName=producNameParam;
+		this.productCategory=productCategoryParam;
+		this.price=priceParam;
 		
 	}
 	public int getProductId() {

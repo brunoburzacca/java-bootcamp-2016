@@ -16,9 +16,10 @@ public class ProductDB {
 
 		try {
 
-			System.out.println("trying to connect to the server ");
-
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("successful connection");
 
 			Statement stmt = conn.createStatement();
@@ -51,9 +52,10 @@ public class ProductDB {
 		
 		try {
 
-			System.out.println("trying to connect to the server ");
-
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/shoppingcart", "root", "Globant2016");
+			String URL = "jdbc:mysql://localhost/shoppingcart";
+			String USER = "root";
+			String PASS = "Globant2016";
+			Connection conn = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("successful connection");
 
 			Statement stmt = conn.createStatement();
