@@ -1,0 +1,22 @@
+ex02
+
+db.student.insertMany([{name: "student1",lastName: "last1",birth: "01/01/1990",course:"math",notes:[10,10,10,10] }])
+db.student.insertMany([{name: "student1",lastName: "last1",birth: "01/01/1990",course:"history",notes:[1,1,1,1] }])
+db.student.insertMany([{name: "student2",lastName: "last2",birth: "01/01/1990",course:"math",notes:[5,5,5,5] }])
+db.student.insertMany([{name: "student2",lastName: "last2",birth: "01/01/1990",course:"english",notes:[10,10,10,10] }])
+db.student.insertMany([{name: "student3",lastName: "last3",birth: "01/01/1990",course:"math",notes:[8,8,9,8] }])
+db.student.insertMany([{name: "student4",lastName: "last4",birth: "01/01/1990",course:"english",notes:[10,10,10,10] }])
+db.student.insertMany([{name: "student5",lastName: "last5",birth: "01/01/1990",course:"math",notes:[1,1,1,1] }])
+db.student.insertMany([{name: "student6",lastName: "last6",birth: "01/01/1990",course:"math",notes:[10,10,10,10] }])
+db.student.insertMany([{name: "student6",lastName: "last6",birth: "01/01/1990",course:"english",notes:[1,1,1,1] }])
+
+db.student.find( { course:"math","notes.3": {$gt: 4}} )
+_______________________________________________________________________________________________________________________
+
+db.teacher.insertMany([{name: "teacher1",lastName: "last1",birth: "01/01/1970", course:"english"}])
+db.teacher.insertMany([{name: "teacher1",lastName: "last1",birth: "01/01/1970",course:"math"}])
+db.teacher.insertMany([{name: "teacher1",lastName: "last1",birth: "01/01/1970",course:"spanish"}])
+db.teacher.insertMany([{name: "teacher2",lastName: "last2",birth: "01/01/1970",course:"science"}])
+db.teacher.insertMany([{name: "teacher3",lastName: "last3",birth: "01/01/1970",course:"physic"}])
+
+db.teacher.find({ name:"teacher1"}).sort({course})
